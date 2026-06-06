@@ -107,8 +107,7 @@ public class IndexedMinHeap {
             throw new RuntimeException("List is empty");
         }
         if(!lookUpMap.containsKey(value)){
-            System.out.println("Value is not found");
-            return;
+            throw new NoSuchElementException();
         }
         Set<Integer> set = lookUpMap.get(value);
         if(set.isEmpty()){
@@ -137,6 +136,7 @@ public class IndexedMinHeap {
         bubbleDown(list,index);
         bubbleUp(list,index);
         validateHeap();
+        return;
     }
 
     private void validateHeap(){
