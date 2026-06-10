@@ -55,6 +55,7 @@ public class DungeonProblem {
             int[] pathValue = resolveIndex(index, R, C);
             System.out.print(Arrays.toString(pathValue)+ "->");
         }
+        System.out.println();
         int result = path.size()-1;
         System.out.println("Shortest move length is  "+result);
     }
